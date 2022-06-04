@@ -1,0 +1,84 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="小众品牌集合地，穿出独特风格。"/>
+    <meta name="author" content="Sun."/>
+    <meta name="keywords" content="购物，小众品牌，衣服"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Brands</title>
+    <link rel="stylesheet" href="{% static './css/Order.css'%}" type="text/css"/>
+    <script src="{% static './js/order.js'%}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+</head>
+<body class="top">
+     <!---back button-->
+     <div class="back-button">
+     <div class="Back">
+       <a href="./new.html#" class="btn btn_text">Back</a>
+     </div>
+     <div class="back">
+        <a href="./new.html#"><img src="{% static './images/close-bold.png'%}" alt="Back" class="icon_img"></a>
+     </div>
+    </div>
+
+ <!--Layout for the form starts here-->
+    <div class="container">
+        <div class="row">
+            <!--Begining of the Main Form-->
+            <div class=" offset-md-3 col-md-6 orderInfo">
+                <form id="form" class="from-container" action="#">
+                        <h2 class="box_head">Your Order</h2>
+                    <div class="mb-3">
+                        <p class="box_text">First Name:</p>
+                        <div class="box_input box1"><input class="form-control" id="first"  type="text" onblur="checkFirst();" required /></div>
+                        <div class="box_remind"><span id="first_Check"></span></div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="box_text">Last Name:</p>
+                        <div class="box_input box2"><input class="form-control" id="last" type="text" onblur="checkLast();" required /></div>
+                        <div class="box_remind"><span id="last_Check"></span></div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="box_text ">Phone number:</p>
+                        <div class="box_input box3"><input class="form-control" id="phone"  type="text" onblur="checkPhone();" placeholder="xxxx-xxx-xxxx" required /></div>
+                        <div class="box_remind"><span id="phone_Check"></span></div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="box_text ">Destination:</p>
+                        <div class="box_input box4"><input class="form-control" id="dest" type="text" onblur="checkDest();" required /></div>
+                        <div class="box_remind"><span id="dest_Check"></span></div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="box_text ">Quantity:</p>
+                        <div class="box_input box5"><input class="form-control" id="quantity"  type="number" min="1" max="5" required /></div>
+                        <div class="box_remind"></div>
+                    </div>
+                    <div class="mb-3">
+                        <p class="box_text">Payment method:</p>
+                        <div class="box_input box6">                                    
+                            <select class="form-control" name="paymethod" id="paymethod" required>
+                                <option class="pay_text">Cash</option>
+                                <option class="pay_text">Card</option>
+                                <option class="pay_text">PayPal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <div class="mb-3">
+                            <span id="sendOrder" onclick="outputData();"> 
+                            <button type="submit" value="Send Order" class="btn_box"><a href="./pay.html">Send Order</a></button>
+                         </span>
+                        </div>
+                    </div>
+                </form>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

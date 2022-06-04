@@ -1,0 +1,230 @@
+body{
+    background-image: url(../images/bg-tone.PNG);
+  }
+  .container {
+      width: 1170px;
+      margin: 0 auto;
+      padding: 0 15px;
+  }
+  
+  *{
+      margin:0;
+      padding:0;
+  }
+  div, p, input, button, form, span, a, ul, li {
+      box-sizing: border-box;
+  }
+  ul{
+      list-style: none;
+      padding:0;
+  }
+  .btn:hover{
+      text-decoration: underline;
+  }
+  
+  /*头部菜单*/
+  .start{
+      display: block;
+      width: 45px;
+      height: 199px;
+      padding-top: 30px;
+      
+  }
+  #start *{
+      margin:0;
+      padding:0;
+  }
+  #start li{
+      list-style-type:none;
+      float:left;
+      line-height:40px;
+      text-align:center;
+  }
+  #start li a{
+      display:block;
+  }
+  #start li a:hover{
+      background:#eee;
+      color:red;
+  }
+  #start .submenu ul{
+      display:none;
+  }
+  #start .submenu:hover ul{
+      display:block;
+  }
+  .btn_text{
+      text-decoration: none;
+      color: #515151;
+      font-size: 25px;
+      font-weight: 300;
+      padding-top: 10px;
+      font-family: 'Raleway';
+  }
+  
+  .childMenu{
+      width: 45px;
+      padding-top: 20px;
+  }
+  .logo{
+      display: block;
+      width: 500px;
+      padding-top: 20px;
+  }
+  .logo_img{
+      display: block;
+      width: 500px;
+      margin: 0 auto;
+      padding-top: 0px;
+  }
+  .icon{
+      width: 200px;
+      display: block;
+      padding-top: 137px;
+  }
+  .icon_img{
+      width: 30px;
+      height: auto;
+  }
+  .btn_icon{
+      margin: 8px;
+  }
+  .menu{
+      display: flex;
+      justify-content:space-around;
+      padding-top: 50px;
+  }
+  /*back*/
+  .back-button{
+    padding-top: 100px;
+}
+.Back{
+    width: 51px;
+    padding-top: 50px;
+    padding-left: 100px;
+    display:inline;
+    float: inline-start;
+}
+.back{
+    width: 30px;
+    height: 81px;
+    padding-right: 150px;
+    display: inline;
+    float:right;
+}
+
+/*登陆表单*/
+.text_word{
+    color: #515151;
+    font-size: 50px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    display: block;
+    text-align: center;
+    padding-top: 150px;
+}
+.M_text{
+    font-size: 40px;
+    font-weight: 300;
+    padding-top: 10px;
+    font-family: 'Raleway';
+    display: block;
+    text-align: center;
+}
+
+.from-container{
+    padding: 30px;
+    margin: 80px 0 0 0;
+    background: rgba(0,0,0,0.7);
+    color: snow;
+    box-shadow: 7px 14px 24px 5px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+.mb-3{
+    padding-top: 30px;
+    padding-left: 400px;
+    display: block;   
+}
+.form-control{
+    width: 300px;
+    height: 40px;
+}
+.btn-primary{
+    width: 300px;
+    height: 40px;
+    
+}
+.text_sentence{
+    color: #515151;
+    font-size: 25px;
+    font-weight: 300;
+    padding-top: 10px;
+    font-family: 'Raleway';
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+}
+.box_remind{
+    margin-top: 10px;
+}
+
+
+
+/*响应*/
+
+@media screen and (max-width: 1200px) 
+{
+	.container{
+		width: 1176px;
+	}
+}
+
+@media screen and (max-width: 992px) 
+{
+	.container{
+		width: 720px;
+	}
+	.mb-3{
+        padding-left: 170px;
+    }
+}
+
+@media screen and (max-width: 768px) 
+{
+	.container{
+		width: 540px;
+	}
+    .mb-3{
+        padding-left: 70px;
+    }
+    .text_word{
+        padding-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 576px) 
+{
+    .Back{
+        padding: 30px 30px 30px;
+    }
+    .back{
+        visibility:hidden
+    }
+    .text_word {
+      display: block;
+      font-size: 35px;
+      width: 576px;
+      padding-top: 50px;
+    }
+    .from-container{
+        margin-top: 30px;
+    }
+    .mb-3{
+        width: 50%;
+    }
+    .btn_input{
+        width: 50%;
+    }
+}
+

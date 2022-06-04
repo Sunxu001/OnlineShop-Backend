@@ -1,0 +1,273 @@
+body{
+    background-image: url(../images/bg-tone.PNG);
+  }
+  .container {
+      width: 1170px;
+      margin: 0 auto;
+      padding: 0 15px;
+  }
+  
+  *{
+      margin:0;
+      padding:0;
+  }
+  div, p, input, button, form, span, a, ul, li {
+      box-sizing: border-box;
+  }
+  ul{
+      list-style: none;
+      padding:0;
+  }
+  .btn:hover{
+      text-decoration: underline;
+  }
+  
+ /*Logo brand*/
+.logo{
+    display: block;
+    width: 500px;
+    padding: 30px;
+    margin: 0 auto;
+  }
+  .logo_img{
+    display: block;
+    width: 500px;
+  }
+
+/*back键*/
+.back-button{
+    padding-top: 100px;
+}
+.Back{
+    font-size: 30px;
+    display:block;
+    float: right;
+}
+.back-button{
+    padding: 20px;
+}
+/*衣服产品展示*/
+.row{
+    padding-top: 50px;
+}
+.cloes_p{
+    width: 500px;
+    padding-top: 100px;
+    display: inline;
+    float: inline-start;
+}
+.cloes_img{
+    width: 500px;
+    height: auto;
+}
+.brand_name{
+    color: #515151;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    display: block;
+}
+.product_name{
+    color: #515151;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    display: block;
+    padding-top: 10px;
+}
+.brand_price{
+    color: #515151;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    display: block;
+    padding-top: 30px;
+}
+#size{
+    width: 200px;
+    height: auto;
+    margin-top: 40px;
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    font-size: 16px;
+}
+.form{
+    display: inline;
+    float: right;
+    padding-right: 200px;
+}
+.from-container{
+    width: 400px;
+    padding: 30px;
+    margin: 10px 0 0 0;
+    display: inline;
+}
+
+.form-control{
+    width: 300px;
+    height: 40px;
+    display: inline;
+}
+.product_info{
+    padding-top: 30px;
+}
+.info_close{
+    color: #515151;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Raleway'; 
+    margin: 10px;
+}
+.button{
+    width: 150px;
+    height: 40px;
+    display: block; 
+    padding-top: 50px; 
+}
+.btn-primary{
+    width: 150px;
+    height: 40px; 
+    color: #515151;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Raleway'; 
+}
+.btn-buy{
+   margin-top: 20px;
+   color: #515151;
+}
+
+
+
+
+
+/*脚部*/
+.left{
+    margin-top: 50px;
+    display: block;
+}
+.mark{
+    width: 250px;
+    height: auto;
+    display: block;
+    padding-top: 150px;
+}
+.btn_function{
+    text-decoration: none;
+    color: #515151;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    margin: 15px;
+    display: block;
+    float: right;
+    position: relative;
+    top: -50px;;
+}
+/*响应*/
+@media screen and (max-width: 1200px) 
+{
+    .logo_img{
+		width: 100%;
+		margin-top: 40px
+	}
+}
+@media screen and (max-width: 992px) 
+{
+	.container{
+		width: 720px;
+	}
+    .logo_img{
+        width: 370px;
+        padding-left: 50px;
+      }
+    .cloes_img{
+        width: 300px;
+    }
+    .form{
+        width: 300px;
+        height: auto;
+    }
+    .brand_name{
+        font-size: 25px;
+    }
+    .product_name{
+        font-size: 15px;
+        padding-top: 10px;
+        width: 400px;
+    }
+    .brand_price{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    #size{
+        margin-top: 10px;
+    }
+    .product_info{
+        padding-top: 5px;
+        width: 400px;
+    }
+    .button{
+        padding-top: 20px;
+    }
+  .left{
+    margin: 10px;
+  }
+  .mark{
+    visibility:hidden;
+    padding-top: 50px;
+  }
+  .btn_function{
+    font-size: 17px;
+  }
+
+}
+
+@media screen and (max-width: 768px) 
+{
+	.container{
+		width: 540px;
+	}
+    .cloes_img{
+        width: 400px;
+        padding-left: 60px;
+    }
+    .form{
+        width: 400px;
+    }
+      .btn_function{
+        font-size: 17px;
+        padding-right: 80px;
+      }
+}
+
+@media screen and (max-width: 576px) 
+{
+    .logo_img{
+        width: 300px;
+        padding-left: 80px;
+      }
+    .cloes_img{
+        width: 300px;
+        padding-left: 100px;
+    }
+    .form{
+        width: 400px;
+        padding-right: 100px;
+    }
+.mark{
+  padding-top: 50px;
+
+}
+  .btn_function{
+    font-size: 20px;
+    width: 300px;
+    margin-top: 10px;
+  }
+  
+}

@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% load static%}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="description" content="小众品牌集合地，穿出独特风格。"/>
+    <meta name="author" content="Sun."/>
+    <meta name="keywords" content="购物，小众品牌，衣服"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Brands</title>
+    <link rel="stylesheet" href="{% static './css/Login.css' %}" type="text/css"/>
+    <script src="./js/login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+</head>
+<body class="top">
+     <!---back键-->
+     <div class="back-button">
+     <div class="Back">
+       <a href=" 'index' %}" class="btn btn_text">Back</a >
+     </div>
+     <div class="back">
+        <a href="{% url 'index' %}"> < img src={% static './images/close-bold.png' %}" alt="Back" class="icon_img"></a >
+     </div>
+    </div>
+
+ <!--Layout for the form starts here-->
+
+ <div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form class="from-container" name="myForm" action="#" onsubmit="return validateForm()" method="POST">
+                <h2 class="box_title">Log in!</h2>
+                <div class="mb-3">
+                  <div class="box_input"><input class="form-control" id="phone" type="text" onblur="checkPhone();" placeholder="Phone" required /></div>
+                  <div class="box_remind"><span id="phone_Check"></span></div>
+              </div>
+                <div class="mb-3">
+                    <div class="box_input"><input type="password"  class="form-control" id="Password" onblur="checkPassword();" placeholder="Password" required /></div>
+                  <div class="box_remind"></div>
+                </div>
+                <div class="btn">
+                    <div class="mb-3">
+                        <span id="Submit" onclick="outputData();"> 
+                        <button type="submit" value="submit" class="btn_box">Submit</button>
+                     </span>
+                    </div>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+{% endblock content %}

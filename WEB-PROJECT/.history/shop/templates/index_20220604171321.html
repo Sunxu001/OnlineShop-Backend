@@ -1,0 +1,117 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="小众品牌集合地，穿出独特风格。"/>
+    <meta name="author" content="Sun."/>
+    <meta name="keywords" content="购物，小众品牌，衣服"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Brands</title>
+    <link rel="stylesheet" href="{% static 'css/HOME.css' %}" type="text/css"/>
+    <script src="{% static 'js/brands.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="top">
+    <!---头部菜单-->
+    <div class="header">
+        <div class="container">
+             <!---logo brand-->
+             <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'images/logo.jpg' %}" class="logo_img"></a>
+            </div>
+            <hr/>
+            <div class="menu">
+                <ul id="start">
+                    <il class="submenu">
+                        <a href="#" class="btn btn_text btn_menu">Menu <i></i></a>
+                        <ul class="childMenu">
+                            <il><a href="#" class="btn btn_text">New</a></il>
+                            <il><a href="#" class="btn btn_text">Coats</a></il>
+                            <il><a href="#" class="btn btn_text">Top</a></il>
+                            <il><a href="#" class="btn btn_text">Skirt</a></il>
+                            <il><a href="#" class="btn btn_text">Janes</a></il>
+                            <il><a href="#" class="btn btn_text">Accessories</a></il>
+                        </ul>
+                    </il>
+                </ul>
+                <!---icon 图标-->
+                <div class="icon">
+                    <ul class="icon_menu">
+                        <li><a href="{% url 'login'%}" class="btn_icon"><i class="bi bi-person-circle icon_img" title="Log in"></i></a></li>
+                        <li><a href="#" class="btn_icon"><i class="bi bi-heart icon_img" title="Like"></i></a></li>
+                        <li><a href="#" class="btn_icon"><i class="bi bi-bag icon_img" title="My bag"></i></a></li>
+                        <li><a href="{% url 'message'%}" class="btn_icon"><i class="bi bi-bell icon_img" title="Message"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <hr class="line"/>
+         <!---海报-->
+    <div class="container">
+        <div class="poster">
+            <ul class="slides">
+                <input type="radio" id="control-1" name="control" checked>
+                <input type="radio" id="control-2" name="control" >
+                <input type="radio" id="control-3" name="control" >
+
+                <li class="slide"><img src="{% static 'images/my812_p.png' %}" class="desktop"> </li>
+                <li class="slide"><img src="{% static 'images/shushutong_p.jpeg' %}" class="desktop"> </li>
+                <li class="slide"><img src="{% static 'images/tiptoe_p.jpeg' %}" class="desktop"> </li>
+
+                <div class="controls-visible">
+                    <label for="control-1"></label>
+                    <label for="control-2"></label>
+                    <label for="control-3"></label>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!---开始购买-->
+    <div class="shop">
+        <a href="{% url 'new' %}" class="btn shop_btn animate__animated animate__flash">Shop Now !</a>
+    </div>
+     <!---产品展示-->
+    <div class="product">
+        <div class="container">
+            {% for product in products%}
+            <div class="show">
+                <a href="{% url 'cloes' goods_code=product.goods_code%}" ><img src="{% static   %}" class="show_img"></a>
+                <h3 class="show_name">{{product.name}}</h3>
+                <h4 class="show_price">{{product.shop_price}}</h4>
+            </div>   
+            {% endfor %}
+        </div>
+    </div>
+     <!--结尾-->
+    <div class="footer">
+        <div class="container">
+            <div class="left">
+                <ul class="undermenu">
+                    <il>
+                        <img src="{% static 'images/tubiao.PNG' %}" class="mark">
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function"> About Company</a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function"> Contact Us</a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function">Delivery</a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function">Returns & Exchanges </a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function">Payment</a>
+                    </il>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

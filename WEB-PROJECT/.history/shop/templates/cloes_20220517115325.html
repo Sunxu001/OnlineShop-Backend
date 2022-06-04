@@ -1,0 +1,100 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="小众品牌集合地，穿出独特风格。"/>
+    <meta name="author" content="Sun."/>
+    <meta name="keywords" content="购物，小众品牌，衣服"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Brands</title>
+    <link rel="stylesheet" href="./css/Cloes.css" type="text/css"/>
+    <script src="{% static '.js/brands.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+</head>
+<body class="top">
+    <!---头部菜单-->
+    <div class="header">
+        <div class="container">
+             <!---logo brand-->
+             <div class="logo">
+                <a href="./index.html"><img src="{% static './images/logo.jpg'%}" class="logo_img"></a>
+            </div>
+            <hr/>
+     <!---back键--->
+     <div class="back-button">
+     <div class="Back">
+       <a href="./new.html" class="btn btn_text">Back</a>
+     </div>
+<--衣服单品页-->
+     <main class="main" rloe="main">
+        <div class="container">
+            <div class="row">
+                <div class="cloes_p">
+                    <img src="{% static './images/TRed.JPG'%}" alt="cloes" class="cloes_img">
+                </div>
+                <div class="form">
+                    <form class="from-container">
+                        <p class="brand_name">TIPTOEROLL</p>
+                        <p class="product_name">Red top ROSIE sweater with detachable sleeves</p>
+                        <p class="brand_price">2990 Р</p>
+                        <div class="input">
+                            <select name="close_size" id="size" >
+                                <optgroup label="size" class="size_input">
+                                     <option value="XS" class="size_text">XS</option>
+                                     <option value="S" class="size_text">S</option>
+                                     <option value="M" class="size_text">M</option>
+                                     <option value="L" class="size_text">L</option>
+                                     <option value="XL" class="size_text">XL</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="product_info">
+                            <p class="info_close">Composition:</p>
+                            <p class="info_close">Material: Modal fiber (Modal) 40.8% cotton</p>
+                            <p class="info_close">Color: Rosie</p>
+                        </div>
+                        <div class="button">
+                        <button type="submit" class="btn btn-primary btn-bag">Put in the bag</button>
+                        <button type="submit" class=" btn btn-primary btn-buy"><a href="./order.html"  class=" btn btn-primary btn-buy">Buy</a></button>
+                        </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+      </main>
+       
+
+     <!---footer--->
+    <div class="footer">
+        <div class="container">
+            <div class="left">
+                <ul>
+                    <il>
+                        <img src="{% static './images/tubiao.PNG'%}" class="mark">
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function"> About Company</a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function"> Contact Us</a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function">Delivery</a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function">Returns & Exchanges </a>
+                    </il>
+                    <il class="footer_text">
+                        <a href="#" class="btn btn_function">Payment</a>
+                    </il>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
